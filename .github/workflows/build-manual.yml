@@ -1,11 +1,17 @@
-name: Manual build
-run-name: ${{ github.actor }} has started a build
+name: Manual release
+run-name: ${{ github.actor }} has started a build to release
 on: [workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This is a test."
       - name: Checkout
         uses: actions/checkout@v4
-      - run: ls ${{ github.workspace }}
+      - run: ls -la ${{ github.workspace }}
+
+      - run: man zip
+
+      # - name: Create Release and Upload
+      #   uses: softprops/action-gh-release@v2
+      #   with:
+      #     files: ShrineOfSeparation.zip
