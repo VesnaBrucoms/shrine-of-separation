@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-tags: true
+          fetch-depth: 0
       - run: ls -la ${{ github.workspace }}
 
       - run: cd '${{ github.workspace }}/Data Files/' && zip -r ${{ github.workspace }}/ShrineOfSeparation.zip .
