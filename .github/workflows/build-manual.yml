@@ -1,6 +1,8 @@
 name: Manual release
 run-name: ${{ github.actor }} has started a build to release
 on: [workflow_dispatch]
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
