@@ -16,7 +16,6 @@ jobs:
       - name: Package mod
         run: |
           cd '${{ github.workspace }}/Data Files/' && zip -r ${{ github.workspace }}/ShrineOfSeparation.zip .
-          zipinfo ShrineOfSeparation.zip
 
       - name: Get tag
         id: tag
